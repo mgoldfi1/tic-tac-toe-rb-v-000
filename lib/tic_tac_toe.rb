@@ -24,3 +24,11 @@ def input_to_index(user_input)
 def move(board, index, token)
   board[index] = token
 end
+
+def position_taken?(board,index)
+  if board[index] == "X" || board[index] == "O"
+    true
+  else
+    false
+  end
+end

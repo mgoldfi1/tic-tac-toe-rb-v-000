@@ -1,10 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/tic_tac_toe'
-user_input = gets.strip
-index = input_to_index(user_input)
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-
 puts "Welcome to Tic Tac Toe!"
 
 display_board(board)

@@ -43,6 +43,11 @@ def current_player(board)
   turn_count(board) % 2 == 0 ? "X" : "O"
 end
 
+def turn_count(board)
+  board.count{|token| token == "X" || token == "O"}
+end
+
+
 
 def turn(board)
   user_input = gets.strip
@@ -54,3 +59,4 @@ def turn(board)
     turn(board)
   end
 end
+

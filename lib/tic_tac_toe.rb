@@ -38,3 +38,12 @@ def valid_move?(board,index)
     true
   end
 end
+
+def turn(board)
+  puts "Please enter 1-9:"
+  if valid_move?(board,index)
+    move(board,index,token)
+    display(board)
+  else turn(board)
+  end
+end

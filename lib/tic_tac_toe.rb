@@ -39,12 +39,17 @@ def valid_move?(board,index)
   end
 end
 
+def current_player(board)
+  turn_count(board) % 2 == 0 ? "X" : "O"
+end
+
+
 def turn(board)
   user_input = gets.strip
   index = input_to_index(user_input)
   puts "Please enter 1-9:"
   if valid_move?(board,index)
-    move(board,index,token) && display(board)
+    move(board,index,current_player(board)) && display(board)
   else
     turn(board)
   end

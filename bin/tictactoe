@@ -4,3 +4,6 @@ require_relative '../lib/tic_tac_toe'
 board = [" "," "," "," "," "," "," "," "," "]
 user_input = gets.strip
 index = input_to_index(user_input)
+
+puts "Welcome to Tic Tac Toe!"
+play(board)
